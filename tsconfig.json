@@ -10,6 +10,7 @@
       "scripthost"
     ],
     "importHelpers": true,
+    "jsx": "preserve",
     "moduleResolution": "Node",
     "strict": true,
     "sourceMap": true,
@@ -38,7 +39,8 @@
     }
   },
   "vueCompilerOptions": {
-    "target": 2.7
+    "target": 2.7,
+    "experimentalDisableTemplateSupport": true
   },
   "include": [
     "src/**/*.ts",

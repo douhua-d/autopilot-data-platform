@@ -1,6 +1,6 @@
-import { defineConfig } from "vite"; // 动态配置函数
-import vue from "@vitejs/plugin-vue2";
-import path from "path";
+import { defineConfig } from 'vite' // 动态配置函数
+import vue from '@vitejs/plugin-vue2'
+import path from 'path'
 
 export default () =>
   defineConfig({
@@ -12,20 +12,20 @@ export default () =>
     resolve: {
       alias: [
         {
-          find: "@",
-          replacement: path.resolve(__dirname, "src")
+          find: '@',
+          replacement: path.resolve(__dirname, 'src')
         },
         {
-          find: "components",
-          replacement: path.resolve(__dirname, "src/components")
+          find: 'components',
+          replacement: path.resolve(__dirname, 'src/components')
         },
         {
-          find: "@views",
-          replacement: path.resolve(__dirname, "src/views")
+          find: '@views',
+          replacement: path.resolve(__dirname, 'src/views')
         },
         {
-          find: "@layouts",
-          replacement: path.resolve(__dirname, "src/layouts")
+          find: '@layouts',
+          replacement: path.resolve(__dirname, 'src/layouts')
         }
       ]
     }

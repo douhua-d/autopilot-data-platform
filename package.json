@@ -7,11 +7,14 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint:eslint": "eslint \"src/**/*.{vue,js,jsx}\" --fix",
+    "lint:stylelint": "stylelint \"src/**/*.{vue,css,less,scss}\" --fix"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@typescript-eslint/parser": "^5.37.0",
     "eslint": "^8.23.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-define-config": "^1.7.0",

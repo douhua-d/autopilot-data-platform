@@ -4,15 +4,13 @@
   </BasicLayout>
 </template>
 
-<script>
-import BasicLayout from "@layouts/BasicLayout.vue";
+<script lang="ts">
+import BasicLayout from '@layouts/BasicLayout.vue'
 
 export default {
-  name: "App",
+  name: 'App',
   components: { BasicLayout }
-};
+}
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
