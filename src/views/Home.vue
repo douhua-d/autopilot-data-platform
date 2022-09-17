@@ -6,21 +6,21 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue'
+import { ref } from 'vue';
 
 export default {
   setup() {
-    let flag = ref(1)
+    let flag = ref(1);
     let changeHandler = (): void => {
-      flag.value += 1
-    }
+      flag.value += 1;
+    };
 
     return {
       flag,
-      changeHandler
-    }
-  }
-}
+      changeHandler,
+    };
+  },
+};
 </script>
 
 <style scoped></style>

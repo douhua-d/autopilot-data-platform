@@ -8,19 +8,22 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "prepare": "husky install",
+    "prettier": "prettier --write ./**/*.{js,json,vue}",
     "lint:eslint": "eslint \"src/**/*.{vue,js,jsx}\" --fix",
-    "lint:stylelint": "stylelint \"src/**/*.{vue,css,less,scss}\" --fix"
+    "lint:stylelint": "stylelint src/**/*.less --fix --custom-syntax postcss-less"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
     "@typescript-eslint/parser": "^5.37.0",
+    "autoprefixer": "^10.4.11",
     "eslint": "^8.23.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-define-config": "^1.7.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.4.0",
     "husky": "^8.0.1",
+    "less": "^4.1.3",
     "lint-staged": "^13.0.3",
     "postcss-html": "^1.5.0",
     "postcss-less": "^6.0.0",
@@ -39,7 +42,7 @@
   "dependencies": {
     "@vitejs/plugin-vue2": "^2.0.0",
     "axios": "^0.27.2",
-    "less": "^4.1.3",
+    "pinia": "^2.0.22",
     "three": "^0.144.0",
     "vue": "^2.7.10",
     "vue-router": "^3.5.2",

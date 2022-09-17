@@ -5,12 +5,12 @@
 </template>
 
 <script lang="ts">
-import BasicLayout from '@layouts/BasicLayout.vue'
+import BasicLayout from '@layouts/BasicLayout.vue';
 
 export default {
   name: 'App',
-  components: { BasicLayout }
-}
+  components: { BasicLayout },
+};
 </script>
 
 <style scoped></style>

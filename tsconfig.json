@@ -3,17 +3,15 @@
     "target": "esnext",
     "useDefineForClassFields": true,
     "module": "esnext",
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ],
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
     "importHelpers": true,
     "jsx": "preserve",
     "moduleResolution": "Node",
     "strict": true,
     "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "types",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
@@ -24,32 +22,16 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "@components/*": [
-        "src/components/*"
-      ],
-      "@views/*": [
-        "src/views/*"
-      ],
-      "@layouts/*": [
-        "src/layouts/*"
-      ]
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@views/*": ["src/views/*"],
+      "@layouts/*": ["src/layouts/*"]
     }
   },
   "vueCompilerOptions": {
     "target": 2.7,
     "experimentalDisableTemplateSupport": true
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "tests/**/*.ts", "tests/**/*.tsx"],
+  "exclude": ["node_modules"]
 }

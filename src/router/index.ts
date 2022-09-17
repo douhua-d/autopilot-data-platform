@@ -1,7 +1,7 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
@@ -9,23 +9,23 @@ const routes = [
     name: 'Home',
     component: () => import('@views/Home.vue'),
     meta: {
-      breadcrumb: []
-    }
+      breadcrumb: [],
+    },
   },
   {
     path: '/index',
     name: 'Index',
     component: () => import('@views/Index.vue'),
     meta: {
-      breadcrumb: []
-    }
-  }
-]
+      breadcrumb: [],
+    },
+  },
+];
 
 const router = new VueRouter({
   mode: 'history',
   base: '/',
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
