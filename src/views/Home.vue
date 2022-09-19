@@ -36,7 +36,7 @@ const addCube = () => {
   const material = new MeshBasicMaterial({ color: 0x00ff00 });
   cube = new Mesh(geometry, material);
   scene.add(cube);
-  camera.position.z = 5;
+  camera.position.z = 50;
   render();
 };
 </script>

@@ -1,8 +1,8 @@
-import { Scene, WebGLRenderer, PerspectiveCamera, Object3D } from 'three';
+import { Scene, WebGLRenderer, PerspectiveCamera, Object3D, Camera } from 'three';
 
 let scene: Object3D;
-let camera: Object3D;
-let renderer;
+let camera: Camera;
+let renderer: WebGLRenderer;
 
 const init = () => {
   scene = new Scene();
@@ -12,8 +12,8 @@ const init = () => {
   renderer = new WebGLRenderer();
   renderer.setSize(window.innerWidth, window.innerHeight);
 
-  const container = document.getElementById('container');
-  container.appendChild(renderer.domElement);
+  const container: HTMLElement | null = document.getElementById('container');
+  container!.appendChild(renderer.domElement);
 };
 
 const render = () => {
