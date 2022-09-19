@@ -13,9 +13,9 @@ const routes = [
     },
   },
   {
-    path: '/index',
-    name: 'Index',
-    component: () => import('@views/Index.vue'),
+    path: '/test',
+    name: 'Test',
+    component: () => import('@views/Test.vue'),
     meta: {
       breadcrumb: [],
     },

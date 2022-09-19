@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
+    "build:staging": "vue-tsc --noEmit && vite build --mode staging",
     "preview": "vite preview",
     "prepare": "husky install",
     "prettier": "prettier --write ./**/*.{js,json,vue}",
@@ -15,6 +16,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
+    "@types/three": "^0.144.0",
     "@typescript-eslint/parser": "^5.37.0",
     "autoprefixer": "^10.4.11",
     "eslint": "^8.23.1",
@@ -42,6 +44,7 @@
   "dependencies": {
     "@vitejs/plugin-vue2": "^2.0.0",
     "axios": "^0.27.2",
+    "lodash": "^4.17.21",
     "pinia": "^2.0.22",
     "three": "^0.144.0",
     "vue": "^2.7.10",
