@@ -1,4 +1,4 @@
-import { Scene, WebGLRenderer, PerspectiveCamera, Object3D, Camera } from 'three';
+import { Scene, WebGLRenderer, PerspectiveCamera, Object3D, Camera, AxesHelper } from 'three';
 
 let scene: Object3D;
 let camera: Camera;
@@ -14,6 +14,9 @@ const init = () => {
 
   const container: HTMLElement | null = document.getElementById('container');
   container!.appendChild(renderer.domElement);
+
+  const axesHelper = new AxesHelper(5);
+  scene.add(axesHelper);
 };
 
 const render = () => {

@@ -1,7 +1,5 @@
 <template>
-  <div id="container" ref="containerRef">
-    <meg-button type="primary">按钮</meg-button>
-  </div>
+  <div id="container" ref="containerRef"></div>
 </template>
 
 <script lang="ts" setup>

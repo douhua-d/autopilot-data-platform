@@ -4,7 +4,7 @@ import { scene } from '@/hooks/useScene/useScene';
 const loader = new PCDLoader();
 export const pcdLoader = (url = '/mock/data/pcd/0000000000.pcd') => {
   loader.load(
-    '/mock/data/pcd/0000000000.pcd',
+    '/mock/data/pcd/0000000001.pcd',
     points => {
       console.log('111', points);
       // points.geometry.center();

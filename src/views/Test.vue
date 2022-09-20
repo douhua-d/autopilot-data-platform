@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <h3>{{ count }}</h3>
-    <button class="btn" @click="accumulate">增加+1</button>
+    <meg-button type="primary" class="btn" @click="accumulate">增加+1</meg-button>
   </div>
 </template>
 
@@ -20,7 +20,6 @@ const accumulate = () => commonStore.accumulate();
 
   .btn {
     margin-top: 10px;
-    color: red;
   }
 }
 </style>

@@ -30,7 +30,7 @@ npm run preview
 个人开发分支在完成后应`及时删除`，避免远程无用分支过多
 
 ### 主要技术栈
-`vue 2.7 + vue-router 3.x + pinia 2.x + typescript 4.x + three.js 0.144.0`
+`vue 2.7 + vue-router 3.x + pinia 2.x + typescript 4.x + three.js 0.144.0 + vite 3.x`
 
 
 >`vue` https://blog.vuejs.org/posts/vue-2-7-naruto.html
@@ -39,3 +39,4 @@ npm run preview
 >
 > `three.js `  https://threejs.org/
 >
+> `vite`  https://cn.vitejs.dev/
