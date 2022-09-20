@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Mesh, BoxGeometry, MeshBasicMaterial } from 'three';
+import { Mesh, BoxGeometry, MeshBasicMaterial, Object3D } from 'three';
 import { onMounted } from 'vue';
 import { pcdLoader } from '@/hooks/usePcd/usePcdLoader';
 import { scene, camera, render, init } from '@/hooks/useScene/useScene';
@@ -13,23 +13,15 @@ let cube;
 onMounted(() => {
   init();
   addCube();
-  pcdLoader();
-
-  // // Apifox 生成 mock 数据
-  // var myHeaders = new Headers();
-  // myHeaders.append("User-Agent", "apifox/1.0.0 (https://www.apifox.cn)");
-  //
-  // var requestOptions = {
-  //   method: "GET",
-  //   headers: myHeaders,
-  //   redirect: "follow"
-  // };
-  //
-  // fetch("http://127.0.0.1:4523/m1/1629773-0-default/api/getData", requestOptions)
-  //   .then(response => response.text())
-  //   // .then(result => console.log(result))
-  //   .catch(error => console.log("error", error));
+  loadPCD();
 });
+
+const loadPCD = () => {
+  pcdLoader('/mock/data/pcd/car01.pcd').then(res => {
+    console.log(res);
+    scene.add(res as Object3D);
+  });
+};
 
 const addCube = () => {
   const geometry = new BoxGeometry(1, 1, 1);
