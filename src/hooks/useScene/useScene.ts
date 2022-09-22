@@ -1,17 +1,14 @@
 import { Scene, WebGLRenderer, PerspectiveCamera, Object3D, Camera, AxesHelper } from 'three';
+import { viewsConfig } from '@/hooks/useView/viewConfig';
 
 let scene: Object3D;
-let camera: Camera;
 let renderer: WebGLRenderer;
 
-const init = () => {
+const initScene = () => {
   scene = new Scene();
-  camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-  scene.add(camera);
-
   renderer = new WebGLRenderer({ antialias: true });
   renderer.setSize(window.innerWidth, window.innerHeight);
-  // renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setPixelRatio(window.devicePixelRatio);
 
   const container: HTMLElement | null = document.getElementById('container');
   container!.appendChild(renderer.domElement);
@@ -21,8 +18,9 @@ const init = () => {
 };
 
 const render = () => {
-  requestAnimationFrame(render);
-  renderer.render(scene, camera);
+  // requestAnimationFrame(render);
+  const mainView = viewsConfig[0];
+  renderer.render(scene, mainView.currentCamera);
 };
 
-export { scene, camera, render, init };
+export { scene, camera, renderer, render, initScene };

@@ -17,7 +17,7 @@ export const pcdLoader = (url: string) => {
       error => {
         console.log('load pcd error', error);
         reject(error);
-      },
+      }
     );
   });
 };
