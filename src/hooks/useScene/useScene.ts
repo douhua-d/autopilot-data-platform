@@ -1,4 +1,4 @@
-import { Scene, WebGLRenderer, PerspectiveCamera, Object3D, Camera, AxesHelper } from 'three';
+import { Scene, WebGLRenderer, Object3D, AxesHelper } from 'three';
 import { viewsConfig } from '@/hooks/useView/viewConfig';
 
 let scene: Object3D;
@@ -23,4 +23,4 @@ const render = () => {
   renderer.render(scene, mainView.currentCamera);
 };
 
-export { scene, camera, renderer, render, initScene };
+export { scene, renderer, render, initScene };
