@@ -1,6 +1,8 @@
 import * as THREE from 'three';
 import { viewsConfig } from '@/hooks/useView/viewConfig';
-import { render, renderer } from '@/hooks/useScene/useScene';
+import { render, renderer, scene } from '@/hooks/useScene/useScene';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { TransformControls } from 'three/examples/jsm/controls/TransformControls';
 
 let cameraPerspective: THREE.PerspectiveCamera;
 let cameraOrthographic: THREE.OrthographicCamera;
@@ -44,6 +46,30 @@ export const createMainView = () => {
     height: window.innerHeight * mainView.height,
     zoom_ratio: mainView.zoom_ratio
   };
+
+  const orbit = new OrbitControls(currentCamera, renderer.domElement);
+  orbit.update();
+  orbit.addEventListener('change', render);
+  // orbit.enabled = false;
+  // mainView.orbitPerspective = orbitPerspective;
+
+  const control = new TransformControls(currentCamera, renderer.domElement);
+  control.setSpace('local');
+  control.addEventListener('change', render);
+
+  console.log('scene', scene);
+  console.log('control', control);
+
+  control.attach(scene.children[2]);
+  scene.add(control);
+  mainView.control = control;
+
+  control.addEventListener('dragging-changed', function (event) {
+    console.log('dragging-changed', event);
+    orbit.enabled = !event.value;
+  });
+
+  console.log('currentCamera', currentCamera);
 };
 
 export function onWindowResize() {

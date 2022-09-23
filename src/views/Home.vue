@@ -5,7 +5,7 @@
 <script lang="ts" setup>
 import { Mesh, BoxGeometry, MeshBasicMaterial } from 'three';
 import { onMounted } from 'vue';
-import { scene, camera, render } from '@/hooks/useScene/useScene';
+import { scene, render } from '@/hooks/useScene/useScene';
 import { init } from '@/hooks/useControl/useControl';
 
 let cube;
