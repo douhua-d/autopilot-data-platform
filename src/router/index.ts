@@ -5,13 +5,21 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: () => import('@views/Home.vue'),
+    path: '/data-detail',
+    name: '数据详情',
+    component: () => import('@views/DataDetail.vue'),
     meta: {
       breadcrumb: [],
     },
   },
+  // {
+  //   path: '/',
+  //   name: 'Home',
+  //   component: () => import('@views/DataView.vue'),
+  //   meta: {
+  //     breadcrumb: [],
+  //   },
+  // },
   {
     path: '/test',
     name: 'Test',
