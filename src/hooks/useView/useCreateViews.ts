@@ -3,7 +3,7 @@ import { viewsConfig } from '@/hooks/useView/viewConfig';
 import { render } from '@/hooks/useRender/useRender3D';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { TransformControls } from 'three/examples/jsm/controls/TransformControls';
-import { mainController } from "@/hooks/useControl/useControl";
+import { mainController } from '@/hooks/useControl/useControl';
 
 let cameraPerspective: THREE.PerspectiveCamera;
 let cameraOrthographic: THREE.OrthographicCamera;
@@ -49,7 +49,6 @@ const createMainView = (scene, containerRef, renderer) => {
     height: window.innerHeight * mainView.height,
     zoom_ratio: mainView.zoom_ratio
   };
-
 
   const orbit = new OrbitControls(currentCamera, containerRef);
   orbit.update();

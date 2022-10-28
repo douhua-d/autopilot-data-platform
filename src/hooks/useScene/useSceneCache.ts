@@ -55,9 +55,10 @@ export class SceneCache {
     return scene;
   }
 
-  preloadScene(taskId, index, worldLoadedCallback) {
-    // const id = this.meta.srcList[index].id;
-    const world = makeNewWorld(taskId, 0, false);
+  preloadScene(taskId, index,worldLoadedCallback) {
+    console.log("this.meta",this.meta);
+    const frameId = this.meta.srcList[index].id;   // 从 1 开始
+    const world = makeNewWorld(taskId, frameId, false);
 
     //  创建scene
     const scene = this.createScene(index);

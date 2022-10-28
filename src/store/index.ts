@@ -6,3 +6,4 @@ Vue.use(PiniaVuePlugin);
 export const store = createPinia();
 
 export * from './modules/common';
+export * from './modules/pcd';

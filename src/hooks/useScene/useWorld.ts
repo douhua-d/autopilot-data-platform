@@ -51,6 +51,7 @@ class World {
   }
 
   load_points() {
+    console.log("load_points");
     pcdLoader('/mock/data/pcd/1.pcd')
       .then((res: any) => {
         res.material.size = 1;

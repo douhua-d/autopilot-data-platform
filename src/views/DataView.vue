@@ -5,6 +5,7 @@
 <script lang="ts" setup>
 import { onMounted, ref, computed } from 'vue';
 import { init } from '@/hooks/useControl/useControl';
+import { metaTest } from "/mock/mock.js";
 
 // 声明props
 const props = defineProps({
@@ -17,14 +18,16 @@ const props = defineProps({
 });
 
 // 通过props的一些数据，处理的整体的元数据
-const meta = computed(() => {
+// const meta = computed(() => {
+//
+// });
 
-});
+const meta = metaTest
 
-// let cube;
 const containerRef = ref<HTMLElement | null>(null);
 
 onMounted(() => {
+  console.log("onMounted---test meta-----",meta);
   init(containerRef, meta);
 });
 
