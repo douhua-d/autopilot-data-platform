@@ -9,8 +9,8 @@ const routes = [
     name: '数据详情',
     component: () => import('@views/DataDetail.vue'),
     meta: {
-      breadcrumb: [],
-    },
+      breadcrumb: []
+    }
   },
   // {
   //   path: '/',
@@ -21,19 +21,27 @@ const routes = [
   //   },
   // },
   {
+    path: '/',
+    name: 'Test',
+    component: () => import('@views/Test.vue'),
+    meta: {
+      breadcrumb: []
+    }
+  },
+  {
     path: '/test',
     name: 'Test',
     component: () => import('@views/Test.vue'),
     meta: {
-      breadcrumb: [],
-    },
-  },
+      breadcrumb: []
+    }
+  }
 ];
 
 const router = new VueRouter({
   mode: 'history',
   base: '/',
-  routes,
+  routes
 });
 
 export default router;
