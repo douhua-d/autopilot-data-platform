@@ -5,7 +5,7 @@
 <script lang="ts" setup>
 import { onMounted, ref, computed } from 'vue';
 import { init } from '@/hooks/useControl/useControl';
-import { metaTest } from "/mock/mock.js";
+import { metaTest } from '/mock/mock.js';
 
 // 声明props
 const props = defineProps({
@@ -22,15 +22,14 @@ const props = defineProps({
 //
 // });
 
-const meta = metaTest
+const meta = metaTest;
 
 const containerRef = ref<HTMLElement | null>(null);
 
 onMounted(() => {
-  console.log("onMounted---test meta-----",meta);
+  console.log('onMounted---test meta-----', meta);
   init(containerRef, meta);
 });
-
 </script>
 
 <style lang="less" scoped></style>

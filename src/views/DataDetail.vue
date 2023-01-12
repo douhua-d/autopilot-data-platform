@@ -6,10 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import Data from "@views/DataView.vue";
-
+import Data from '@views/DataView.vue';
 </script>
 
-<style lang="less" scoped>
-
-</style>
+<style lang="less" scoped></style>
