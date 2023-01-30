@@ -3,6 +3,7 @@
     <h3>{{ count }}</h3>
     <meg-button type="primary" class="btn" @click="accumulate">增加+1</meg-button>
     <div>+ 1 合进主分支</div>
+    <div> 2  合进主分支</div>
   </div>
 </template>
 
